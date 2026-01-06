@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Chat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="message.css">
+</head>
+<body>
+    <div class="navigation-div">
+        <div class="navigation-bar">
+            <div class="logo">
+                <h2>CYBERCHAT</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Back to Dashboard</a></li>
+                <li><a href="help-center.html">Help Center</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li class="dropdown">
+                    <div class="dropdown-toggle" id="dropdownToggle">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Profile</span>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                    <ul class="dropdown-menu" id="dropdownMenu">
+                        <li><a href="#"><i class="fas fa-user"></i> My Profile</a></li>
+                        <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                        <li><a href="#"><i class="fas fa-bell"></i> Notifications</a></li>
+                        <li><a href="#" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Chat Layout -->
+    <div class="main-content">
+        <!-- Chat List -->
+        <div class="chat-list">
+            <div class="chat-list-header">Messages</div>
+            <div class="chat-items">
+                <div class="chat-item" data-chat="1">
+                    <div class="chat-avatar">A</div>
+                    <div class="chat-info">
+                        <div class="chat-name">Alice Johnson</div>
+                        <div class="chat-preview">Hey! How's the project going?</div>
+                    </div>
+                    <div class="chat-time">2:34 PM</div>
+                </div>
+                <div class="chat-item" data-chat="2">
+                    <div class="chat-avatar">B</div>
+                    <div class="chat-info">
+                        <div class="chat-name">Bob Smith</div>
+                        <div class="chat-preview">Let's catch up soon!</div>
+                    </div>
+                    <div class="chat-time">Yesterday</div>
+                </div>
+                <div class="chat-item" data-chat="3">
+                    <div class="chat-avatar">C</div>
+                    <div class="chat-info">
+                        <div class="chat-name">Cyber Team</div>
+                        <div class="chat-preview">Meeting at 5 PM</div>
+                    </div>
+                    <div class="chat-time">Monday</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Inbox -->
+        <div class="chat-inbox" id="chatInbox">
+            <div class="no-chat">Select a conversation to start messaging</div>
+        </div>
+    </div>
+
+    <script src="message.js"></script>
+</body>
+</html>
