@@ -38,3 +38,35 @@ function updateNavbar() {
         profileItem.style.display = 'none';
     }
 }
+
+// Feedback Form Submission
+const feedbackForm = document.getElementById('feedbackForm');
+const successMessage = document.getElementById('successMessage');
+feedbackForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const rating = document.querySelector('input[name="rating"]:checked');
+    const feedbackText = this.querySelector('.feedback-input').value.trim();
+    if (!rating) {
+        alert('Please select a star rating!');
+        return;
+    }
+    // In real app: send to server via fetch/AJAX
+    console.log('Feedback Submitted:', {
+        rating: rating.value,
+        message: feedbackText
+    });
+    // Show success message
+    successMessage.classList.add('show');
+    // Reset form
+    this.reset();
+    document.querySelectorAll('input[name="rating"]').forEach(r => r.checked = false);
+    document.querySelectorAll('.rating-stars label').forEach(l => {
+        l.style.color = 'rgba(0, 255, 255, 0.2)';
+        l.style.textShadow = 'none';
+        l.style.transform = 'scale(1)';
+    });
+    // Hide success message after 4 seconds
+    setTimeout(() => {
+        successMessage.classList.remove('show');
+    }, 4000);
+});

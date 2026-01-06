@@ -17,7 +17,7 @@
             
             <ul class="nav-links">
                 <li><a href="index.html">Dashboard</a></li>
-                <li><a href="message.html">Message</a></li>
+                <li><a href="message.html">Messenger</a></li>
                 <li><a href="help-center.html">Help Center</a></li>
                 <li><a href="about-us.html">About Us</a></li>
                 <li><a href="signIn.html" class="btn-signin">Sign In</a></li>
@@ -38,7 +38,42 @@
         </nav>
     </header>
 
+    <main>
+        <p>we value your privacy. Hope for the better experience</p>
+    </main>
+
+    <!-- Feedback Footer -->
+    <footer>
+        <div class="footer-container">
+            <h3 class="footer-title">We Value Your Feedback</h3>
+            <p class="footer-desc">Help us improve Shadow-Talk by sharing your experience</p>
+
+            <!-- Star Rating -->
+            <div class="rating-stars">
+                <input type="radio" name="rating" id="star5" value="5">
+                <label for="star5"><i class="fas fa-star"></i></label>
+                <input type="radio" name="rating" id="star4" value="4">
+                <label for="star4"><i class="fas fa-star"></i></label>
+                <input type="radio" name="rating" id="star3" value="3">
+                <label for="star3"><i class="fas fa-star"></i></label>
+                <input type="radio" name="rating" id="star2" value="2">
+                <label for="star2"><i class="fas fa-star"></i></label>
+                <input type="radio" name="rating" id="star1" value="1">
+                <label for="star1"><i class="fas fa-star"></i></label>
+            </div>
+
+            <!-- Feedback Form -->
+            <form class="feedback-form" id="feedbackForm">
+                <textarea class="feedback-input" placeholder="Tell us what you think..." required></textarea>
+                <button type="submit" class="submit-feedback">Submit Feedback</button>
+            </form>
+
+            <div class="success-message" id="successMessage">
+                Thank you! Your feedback has been received.
+            </div>
+        </div>
+    </footer>
+
     <script src="scripts.js"></script>
-    <script src="../server.js"></script>
 </body>
 </html>
